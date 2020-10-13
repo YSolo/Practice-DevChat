@@ -1,0 +1,28 @@
+- Create a cluster in Mongo DB
+	- add user to read and write
+	- whitelist the IP address
+	- copy string from connection your application menu
+- Create a folder .gitignore with node_moules/
+- Run npm init and follow instructions (entry point: server.js)
+- Install depenpencies "npm i ..."
+	- express (main web framework for the backend)
+	- express-validator (data validation)
+	- bcryptjs (password encription)
+	- config (for global variables)
+	- jsonwebtoken (coz we use jwt to pass along the token for validation)
+	- mongoose (leyer on top of the database to interact with it)
+	- request (small module that allows to make http request to another API)
+- Install dev dependancies "npm i -D ..."
+	- nodemon (constantly watches the server so we don't have to refresh the page every time)
+	- concurrently (allows us to run espress server and react server at the same time with one command)
+- Create entry file "server.js"
+	- const express = require('express');    // bring in express
+	- const app = express() 	         // initialize app variable with express	
+	- const PORT = process.env.PORT || 5000; // port variable. This will look for an environment variable PORT to use and when we deply to heroku, it will find it, otherwise 5000 will be used.
+	- app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+	- app.get('/', (req, res) => res.send('API Running')); // creating simple end point just to test it out
+- Change package.json file (you could run it with node server or node server.js commands) scripts:
+	- "start": "node server" // script heroku will run when we deploy
+	- "server": "nodemon server" // for development, so we don't have to restart it every time
+	- now you can test it by running 'npm run server' command
+		- you can check it in the browser or in postman
