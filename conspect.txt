@@ -26,3 +26,17 @@
 	- "server": "nodemon server" // for development, so we don't have to restart it every time
 	- now you can test it by running 'npm run server' command
 		- you can check it in the browser or in postman
+- Create 'config' folder in root
+	- Create file there 'default.json' (this will store all config variables)
+	- Copy mongodb link for application connection as 'mongoURI' variable	
+- Create file in config 'db.js'
+	- require mongoose
+	- bring in config package
+	- make db variable with mongoURI from config
+	- create async await function with try catch block connecting the db
+	- console log on success
+	- console error and exit process on error 
+	- export the connectDB
+	- in server.js add require connectDB and call it
+
+02 - 008
