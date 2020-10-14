@@ -38,5 +38,18 @@
 	- console error and exit process on error 
 	- export the connectDB
 	- in server.js add require connectDB and call it
+- Create files for Routes
+	- create routes=>api
+	- where create auth.js, posts.js, profile.js, users.js
+	- to each of them we have to bring express routers
+	- express and router variables
+	- comments on @route, @desc, @access
+	- router.get('/', (req,res) => res.send('User route'))
+	- export router
+	- copy to other routers
+	- define all routes in server.js
+	- check if they work in postman
+	- add collections to postman
 
-02 - 008
+	
+03 - 009
